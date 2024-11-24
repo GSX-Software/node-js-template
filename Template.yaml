@@ -1,28 +1,46 @@
 apiVersion: scaffolder.backstage.io/v1beta3
-# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-template
 kind: Template
 metadata:
-  name: example-nodejs-template
-  title: Example Node.js Template
-  description: An example template for the scaffolder that creates a simple Node.js service
+  name: nodejs-template
+  title: Example Nodejs Template
+  description: Este é um exemplo de nodejs service
+
 spec:
   owner: core
   type: service
-
-  # These parameters are used to generate the input form in the frontend, and are
-  # used to gather input data for the execution of the template.
   parameters:
-    - title: Fill in some steps
+    - title: Configuração do projeto
       required:
         - name
+        - title
+        - description
+        - namespace
       properties:
         name:
           title: Name
           type: string
-          description: Unique name of the component
+          description: Nome do projeto
           ui:autofocus: true
+        title:
+          title: Title
+          type: string
+          description: nome do projeto que sera exibido no readme etc..
+        description:
+          title: Description
+          type: string
+          description: Descrição do projeto
           ui:options:
             rows: 5
+        namespace:
+          title: Namespace
+          type: string
+          description: Namespace onde sera aplicado o projeto no K8S
+        Owner:
+          title: Owner
+          type: string
+          description: Time responsavel do projeto
+          ui:options:
+            allowedKinds: [Group]
     - title: Choose a location
       required:
         - repoUrl
