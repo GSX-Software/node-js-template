@@ -4,6 +4,8 @@ metadata:
   name: nodejs-template
   title: Example Nodejs Template
   description: Este é um exemplo de nodejs service
+  tags:
+    - nodejs
 
 spec:
   owner: core
