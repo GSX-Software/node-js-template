@@ -39,6 +39,7 @@ spec:
           title: Owner
           type: string
           description: Time responsavel do projeto
+          ui:field: OwnerPicker
           ui:options:
             allowedKinds: [Group]
     - title: Choose a location
