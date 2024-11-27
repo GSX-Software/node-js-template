@@ -57,7 +57,7 @@ spec:
               - github.com
             allowedOwners:
               - gsx-software
-            allowedRepositories:
+            allowedRepos:
               - ${{ parameters.name }}
 
   # These steps are executed in the scaffolder backend, using data that we gathered
