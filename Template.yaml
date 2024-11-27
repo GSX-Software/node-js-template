@@ -57,6 +57,14 @@ spec:
               - github.com
             allowedOwners:
               - gsx-software
+    - title: Escolha a Branch
+      required:
+        - repoBranch
+      properties:
+        repoBranch:
+          title: Repository Branch
+          type: string
+          default: master
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
