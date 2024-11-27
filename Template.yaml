@@ -57,6 +57,8 @@ spec:
               - github.com
             allowedOwners:
               - gsx-software
+            allowedRepository:
+              - ${{ parameters.name }}
 
   # These steps are executed in the scaffolder backend, using data that we gathered
   # via the parameters above.
@@ -72,6 +74,7 @@ spec:
           description: ${{ parameters.description }}
           title: ${{ parameters.title }}
           namespace: ${{ parameters.namespace }}
+          owner: ${{ parameters.owner }}
 
     # This step publishes the contents of the working directory to GitHub.
     - id: publish
@@ -79,5 +82,5 @@ spec:
       action: publish:github
       input:
         allowedHosts: ['github.com']
-        description: This is ${{ parameters.name }}
+        description: This is ${{ parameters.description }}
         repoUrl: ${{ parameters.repoUrl }}
