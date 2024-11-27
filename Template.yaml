@@ -37,7 +37,7 @@ spec:
           title: Namespace
           type: string
           description: Namespace onde sera aplicado o projeto no K8S
-        Owner:
+        owner:
           title: Owner
           type: string
           description: Time responsavel do projeto
